@@ -41,7 +41,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   html {
     font-size: initial;
   }
