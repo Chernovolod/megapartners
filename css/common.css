@@ -24,6 +24,12 @@ h2 {
   font-size: 4rem;
 }
 
+h3 {
+  color: var(--secondary-font-color);
+
+  transition: var(--main-transition);
+}
+
 section:not(:first-of-type) {
   padding: 6rem 0;
 }
@@ -33,10 +39,6 @@ p {
   color: var(--muted-main-font-color);
   margin-top: 2rem;
   margin-bottom: 3rem;
-}
-
-.hero {
-  min-height: 90vh;
 }
 
 .btn {
@@ -137,9 +139,49 @@ form input~span {
   border-radius: 1.5rem;
 }
 
-@media (min-width: 1440px) {
-  .container {
-    /* Important to override bootstrap defaults */
-    max-width: 85%!important;
-  }
+.tinted-card {
+  margin: 0 .5rem;
+  padding: 1.75rem 3rem;
+  cursor: pointer;
+
+  background-color: rgba(var(--font), .12);
+  backdrop-filter: blur(10px);
+  border-radius: 3rem;
+
+  transition: var(--main-transition);
+}
+
+.tinted-card:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.tinted-card * {
+  transition: var(--main-transition);
+}
+
+.tinted-card:hover h3 {
+  color: var(--dark-font-color);
+}
+
+.dropdown-container li {
+  padding: 1.5rem 2rem;
+  border-radius: 2.5rem;
+}
+
+.cross-icon {
+  cursor: pointer;
+
+  transition: var(--main-transition);
+}
+
+.cross-icon-selected {
+  transform: rotate(45deg);
+}
+
+.cross-icon-selected path {
+  fill: var(--secondary-font-color);
+}
+
+.dropdown-container__full-text {
+  visibility: visible;
 }

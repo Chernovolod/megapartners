@@ -1,1 +1,36 @@
+#about .tinted-card, #about .svg {
+  flex: 1;
+}
 
+#about .svg object {
+  height: 100%;
+}
+
+#about ul {
+  margin: 0 -.5rem;
+}
+
+.about_cards {
+  flex: 4;
+}
+
+#brands ul li {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+#brands .thick-bordered {
+  border-radius: 4.5rem;
+}
+
+#brands .tinted-card:hover {
+  cursor: initial;
+  background-color: rgba(var(--font), .12);
+  backdrop-filter: blur(10px);
+}
+
+#brands object {
+  width: 100%;
+}
