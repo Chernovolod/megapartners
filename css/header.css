@@ -1,0 +1,4 @@
+header .bordered {
+  border-radius: 4rem;
+  background-color: var(--main-bg-color);
+}
