@@ -5,6 +5,7 @@ body {
 }
 
 #hero {
+  padding: 4rem;
   min-height: 90vh;
 }
 

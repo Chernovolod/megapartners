@@ -6,6 +6,10 @@ a {
   transition: var(--main-transition);
 }
 
+input {
+  color: var(--main-font-color);
+}
+
 a:hover {
   color: var(--secondary-font-color);
 }
@@ -46,6 +50,7 @@ p {
 
   color: inherit;
   text-transform: uppercase;
+  text-align: center;
   background: transparent;
 
   border: var(--secondary-border);
@@ -64,13 +69,15 @@ p {
   padding: .8rem 4.5rem;
 
   color: inherit;
+  text-transform: uppercase;
+  text-align: center;
+
   background: var(--btn-bg-color);
   background-size: 200% 100%;
   background-position: 100% 0;
 
   border: none;
   border-radius: 3rem;
-  text-transform: uppercase;
 
   transition: var(--long-transition);
 }
@@ -139,33 +146,31 @@ form input~span {
   border-radius: 1.5rem;
 }
 
-.tinted-card {
+.card {
   margin: 0 .5rem;
   padding: 1.75rem 3rem;
   cursor: pointer;
 
-  background-color: rgba(var(--font), .12);
-  backdrop-filter: blur(10px);
   border-radius: 3rem;
 
   transition: var(--main-transition);
 }
 
-.tinted-card:hover {
+.card:hover {
   background-color: var(--hover-bg-color);
 }
 
-.tinted-card * {
+.card * {
   transition: var(--main-transition);
 }
 
-.tinted-card:hover h3 {
-  color: var(--dark-font-color);
+.tinted {
+  background-color: rgba(var(--font), .12);
+  backdrop-filter: blur(10px);
 }
 
-.dropdown-container li {
-  padding: 1.5rem 2rem;
-  border-radius: 2.5rem;
+.card.tinted:hover h3 {
+  color: var(--dark-font-color);
 }
 
 .cross-icon {
@@ -182,6 +187,39 @@ form input~span {
   fill: var(--secondary-font-color);
 }
 
-.dropdown-container__full-text {
-  visibility: visible;
+.accordion-container {
+  cursor: pointer;
+
+  padding: 1.5rem 2rem;
+
+  border-radius: 2.5rem;
+  overflow: hidden;
 }
+
+.accordion-container:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+.accordion__intro {
+  position: relative;
+
+  transition: var(--main-transition);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: var(--main-transition);
+  opacity: 0;
+}
+
+.accordion-container__active .accordion__intro {
+  color: var(--secondary-font-color);
+}
+
+.accordion-container__active .accordion__content {
+  padding-top: 1.5rem;
+  opacity: 1;
+}
+
