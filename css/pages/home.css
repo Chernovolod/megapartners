@@ -56,6 +56,8 @@
 #brands .splide__pagination__page {
   width: .75rem;
   height: .75rem;
+  margin: 0;
+
   background: rgba(var(--font), .2);
 }
 
@@ -66,9 +68,12 @@
 #brands .splide__pagination__page.is-active {
   width: 1.5rem;
   height: 1.5rem;
+
   background: var(--main-font-color);
-  opacity: 1;
   border: .375rem solid var(--secondary-font-color);
+  opacity: 1;
+
+  transform: none;
 }
 
 #commissions ul+div, #commissions ul {
